@@ -19,6 +19,7 @@
             color: #fff;
             padding: 10px 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         
         nav ul {
@@ -35,6 +36,14 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            padding: 10px 15px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background: #555;
+            border-radius: 5px;
+            transform: scale(1.1);
         }
         
         section {
@@ -43,6 +52,8 @@
             max-width: 800px;
             background: #fff;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
         }
         
         section h2 {
@@ -52,29 +63,34 @@
         .intro {
             text-align: center;
             padding: 50px;
+            background: linear-gradient(to right, #333, #555);
+            color: #fff;
+            border-radius: 8px;
         }
         
         .intro .btn {
             display: inline-block;
             padding: 10px 20px;
-            background: #333;
-            color: #fff;
+            background: #fff;
+            color: #333;
             text-decoration: none;
             margin-top: 20px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
         }
         
         .intro .btn:hover {
-            background: #555;
+            background: #f4f4f4;
+            transform: scale(1.05);
         }
-
-        /* Photo section styling */
+        
         #about {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
         }
-
+        
         #about img {
             width: 150px;
             height: 150px;
@@ -82,11 +98,32 @@
             display: block;
             margin: 20px auto;
             object-fit: cover;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+        
+        #about img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
         }
 
         .project {
             margin-bottom: 20px;
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+
+        .project img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
         
         #contact-form {
@@ -96,6 +133,7 @@
         
         #contact-form label {
             margin-top: 10px;
+            font-weight: bold;
         }
         
         #contact-form input,
@@ -113,10 +151,41 @@
             border: none;
             margin-top: 10px;
             cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
         }
         
         #contact-form button:hover {
             background: #555;
+            transform: scale(1.05);
+        }
+
+        .social-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-buttons a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .social-buttons a.github {
+            background: #333;
+        }
+
+        .social-buttons a.linkedin {
+            background: #0077b5;
+        }
+
+        .social-buttons a:hover {
+            background: #555;
+            transform: scale(1.05);
         }
         
         footer {
@@ -124,9 +193,8 @@
             padding: 10px;
             background: #333;
             color: #fff;
-            margin-top: 20px; /* Ensure footer has some spacing from the content */
+            margin-top: 20px; 
         }
-        
     </style>
 </head>
 <body>
@@ -144,35 +212,36 @@
     <section id="home">
         <div class="intro">
             <h1>Welcome to My Portfolio</h1>
-            <p>I am a [Your Job Title]</p>
-            <a href="resume.pdf" class="btn" download>Download Resume</a>
+            <p>I am a Web Developer</p>
+            <a href="resume2.pdf" class="btn" download>Download Resume</a>
         </div>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
-        <img src="profile.jpg" alt="Your Name">
-        <p>Hello! I am [Your Name], a [Your Job Title] with experience in [Your Skills]. I have worked on various projects involving [specific technologies or areas of expertise]. My passion for [your field or interest] drives me to constantly learn and grow. When I'm not working, I enjoy [hobbies or interests].</p>
+        <img src="profile.jpg" alt="Sachin Dubey">
+        <p>Hello! I am Sachin Dubey, a Web Developer with experience in HTML, CSS, JavaScript, and other web development technologies. I have worked on various projects involving creating responsive websites, developing web applications, and enhancing user experiences. My passion for web development drives me to constantly learn and grow. When I'm not working, I enjoy exploring new technologies, working on personal coding projects, and reading tech blogs.</p>
     </section>
 
     <section id="portfolio">
         <h2>My Projects</h2>
         <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of project 1.</p>
-            <a href="https://github.com/yourusername/project1">GitHub Link</a> | <a href="https://project1.com">Live Demo</a>
+            <h3>Chat Bot</h3>
+            <img src="chatbot.png" alt="Chat Bot Project">
+            <p>A chat bot with a signup and login page where users can create their own username and password. It allows users to chat with predefined questions and answers. Technologies used: HTML, CSS, JavaScript (frontend), PHP, MySQL (backend), XAMPP server.</p>
+            <a href="https://github.com/sachin9336/Chat-bot" class="btn">GitHub Link</a> | <a href="https://sachin9336.github.io/Chat-bot/" class="btn">Live Demo</a>
         </div>
         <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of project 2.</p>
-            <a href="https://github.com/yourusername/project2">GitHub Link</a> | <a href="https://project2.com">Live Demo</a>
+            <h3>My Gym</h3>
+            <img src="gym.png" alt="My Gym Project">
+            <p>My Gym provides a state-of-the-art fitness experience with the latest equipment and various training programs. Developed using HTML, CSS, and JavaScript, this website ensures a seamless and engaging user experience. Explore our services, check out our gallery, and get in touch to start your fitness journey!</p>
+            <a href="https://github.com/sachin9336/gym" class="btn">GitHub Link</a> | <a href="https://sachin9336.github.io/gym/" class="btn">Live Demo</a>
         </div>
-        <!-- Add more projects as needed -->
     </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <form id="contact-form">
+        <form id="contact-form" onsubmit="return validateForm()">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             
@@ -186,16 +255,41 @@
         </form>
     </section>
 
+    <section id="social">
+        <div class="social-buttons">
+            <a href="https://github.com/sachin9336" class="github" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/sachin9336/" class="linkedin" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        <p>&copy; 2024 Sachin Dubey. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Smooth Scrolling
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form Validation
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            
+            if (name === "" || email === "" || message === "") {
+                alert('Please fill in all fields.');
+                return false;
+            }
+            alert('Message sent successfully!');
+            return true;
+        }
+    </script>
 </body>
-<script>
-// JavaScript for form submission (simple example)
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Message sent successfully!');
-    this.reset();
-});
-</script>
 </html>
