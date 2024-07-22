@@ -3,171 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>My Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: #f0f0f0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
         }
-
+        
         header {
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        nav {
             background: #333;
             color: #fff;
-            padding: 1rem;
+            padding: 10px 0;
             text-align: center;
         }
-
+        
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-
+        
         nav ul li {
             display: inline;
-            margin: 0 1rem;
+            margin: 0 10px;
         }
-
+        
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-weight: bold;
         }
-
+        
         section {
-            padding: 2rem;
-            margin: 1rem 0;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-
-        section#about {
-            background: #ffb3ba;
-        }
-
-        section#skills {
-            background: #ffdfba;
-        }
-
-        section#projects {
-            background: #ffffba;
-        }
-
-        section#contact {
-            background: #baffc9;
-        }
-
-        h2 {
+        
+        section h2 {
             margin-top: 0;
         }
-
-        footer {
+        
+        .intro {
+            text-align: center;
+            padding: 50px;
+        }
+        
+        .intro .btn {
+            display: inline-block;
+            padding: 10px 20px;
             background: #333;
             color: #fff;
-            padding: 1rem 0;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        
+        .intro .btn:hover {
+            background: #555;
+        }
+
+        /* Photo section styling */
+        #about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
         }
 
-        form label {
+        #about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
             display: block;
-            margin-top: 1rem;
+            margin: 20px auto;
+            object-fit: cover;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        form input, form textarea {
-            width: 100%;
-            padding: 0.5rem;
-            margin-top: 0.5rem;
+        .project {
+            margin-bottom: 20px;
         }
-
-        form button {
-            margin-top: 1rem;
-            padding: 0.7rem 1.5rem;
+        
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #contact-form label {
+            margin-top: 10px;
+        }
+        
+        #contact-form input,
+        #contact-form textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        #contact-form button {
+            padding: 10px;
             background: #333;
             color: #fff;
             border: none;
+            margin-top: 10px;
             cursor: pointer;
         }
-
-        form button:hover {
+        
+        #contact-form button:hover {
             background: #555;
         }
+        
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            margin-top: 20px; /* Ensure footer has some spacing from the content */
+        }
+        
     </style>
 </head>
 <body>
     <header>
-        <h1>Sachin Dubey</h1>
-        <p>Web Developer & Designer</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <section id="home">
+        <div class="intro">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I am a [Your Job Title]</p>
+            <a href="resume.pdf" class="btn" download>Download Resume</a>
+        </div>
+    </section>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi, I'm Sachin Dubey, a passionate web developer and designer.</p>
+        <img src="profile.jpg" alt="Your Name">
+        <p>Hello! I am [Your Name], a [Your Job Title] with experience in [Your Skills]. I have worked on various projects involving [specific technologies or areas of expertise]. My passion for [your field or interest] drives me to constantly learn and grow. When I'm not working, I enjoy [hobbies or interests].</p>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <h3>Project 1</h3>
-                <p>Details about project 1.</p>
-            </li>
-            <li>
-                <h3>Project 2</h3>
-                <p>Details about project 2.</p>
-            </li>
-        </ul>
+    <section id="portfolio">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of project 1.</p>
+            <a href="https://github.com/yourusername/project1">GitHub Link</a> | <a href="https://project1.com">Live Demo</a>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of project 2.</p>
+            <a href="https://github.com/yourusername/project2">GitHub Link</a> | <a href="https://project2.com">Live Demo</a>
+        </div>
+        <!-- Add more projects as needed -->
     </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <form id="contactForm">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
+            
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+            
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
+            
+            <button type="submit">Send Message</button>
         </form>
     </section>
 
     <footer>
-        <p>&copy; 2024 Sachin Dubey. All rights reserved.</p>
+        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
     </footer>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Thank you for your message!');
-        });
-    </script>
 </body>
+<script>
+// JavaScript for form submission (simple example)
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Message sent successfully!');
+    this.reset();
+});
+</script>
 </html>
